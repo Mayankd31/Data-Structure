@@ -12,25 +12,17 @@ int main()
     {
         cin >> a[i];
     }
-    cout << "Enter the elements to be deleted " << endl;
-    int num, t;
-    cin >> num;
+    int index;
+    cout << "Enter the index at which you want to delete that number" << endl;
+    cin >> index;
 
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] == num)
-        {
-            t = i;
-        }
-    }
-
-    for (int i = t; i < n; i++)
+    for (int i = index; i < 4; i++)
     {
         a[i] = a[i + 1];
-        n = n - 1;
     }
 
-    for (int i = 0; i < n; i++)
+    cout << "The array after deletion" << endl;
+    for (int i = 0; i < 4; i++)
     {
         cout << a[i] << " ";
     }
